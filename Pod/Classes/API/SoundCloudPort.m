@@ -95,7 +95,7 @@ NSString *PROVIDER_IDENTIFIER = @"SoundClount_Crendentials";
 }
 
 - (NSString *)webURLForLogin {
-    return [NSString stringWithFormat:@"https://soundcloud.com/connect?client_id=%@&response_type=code",self.oAuth2Manager.clientID];
+    return [NSString stringWithFormat:@"https://soundcloud.com/connect?client_id=%@&response_type=code&scope=non-expiring",self.oAuth2Manager.clientID];
 }
 
 - (void)getCredentialsForCode:(NSString *)code
